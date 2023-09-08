@@ -1,0 +1,68 @@
+<x-guest-layout>
+    <section class="login-content">
+       <div class="row m-0 align-items-center bg-white vh-100">
+          <div class="col-md-6">
+             <div class="row justify-content-center">
+                <div class="col-md-10">
+                   <div class="card card-transparent shadow-none d-flex justify-content-center mb-0 auth-card">
+                      <div class="card-body">
+                         <a href="{{url('/')}}" class="navbar-brand d-flex align-items-center mb-3">
+                            <img src="{{asset('e-mercado-logo.png')}}" style="width: 50px; height: 40px;" alt="">
+                            <h4 class="logo-title ms-3">{{env('APP_NAME')}}</h4>
+                         </a>
+                         <h2 class="mb-2 text-center">Provincial Admin</h2>
+                         <p class="text-center">Login to stay connected.</p>
+                         <x-auth-session-status class="mb-4" :status="session('status')" />
+ 
+                         <!-- Validation Errors -->
+                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                         <form method="POST" action="{{ route('provincelogin') }}" data-toggle="validator">
+                             {{csrf_field()}}
+                            <div class="row">
+                               <div class="col-lg-12">
+                                  <div class="form-group">
+                                     <label for="email" class="form-label">Username</label>
+                                     <input id="email" type="text" name="username"  value="{{old('username')}}"   class="form-control"  placeholder="Username" required autofocus>
+                                  </div>
+                               </div>
+                               <div class="col-lg-12">
+                                  <div class="form-group">
+                                     <label for="password" class="form-label">Password</label>
+                                     <input class="form-control" type="password" placeholder="Password"  name="password" required autocomplete="current-password">
+                                  </div>
+                               </div>
+                               <div class="col-lg-6">
+                                  <div class="form-check mb-3">
+                                     <input type="checkbox" class="form-check-input" id="customCheck1">
+                                     <!-- <input type="checkbox" class="custom-control-input" id="customCheck1"> -->
+                                     <label class="form-check-label" for="customCheck1">Remember Me</label>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                               <button type="submit" class="btn btn-success">{{ __('Sign In') }}</button>
+                            </div>
+                         </form>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="sign-bg">
+                <svg width="280" height="230" viewBox="0 0 431 398" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <g opacity="0.05">
+                   <rect x="-157.085" y="193.773" width="543" height="77.5714" rx="38.7857" transform="rotate(-45 -157.085 193.773)" fill="#3B8AFF"/>
+                   <rect x="7.46875" y="358.327" width="543" height="77.5714" rx="38.7857" transform="rotate(-45 7.46875 358.327)" fill="#3B8AFF"/>
+                   <rect x="61.9355" y="138.545" width="310.286" height="77.5714" rx="38.7857" transform="rotate(45 61.9355 138.545)" fill="#3B8AFF"/>
+                   <rect x="62.3154" y="-190.173" width="543" height="77.5714" rx="38.7857" transform="rotate(45 62.3154 -190.173)" fill="#3B8AFF"/>
+                   </g>
+                </svg>
+             </div>
+          </div>
+          <div class="col-md-6 d-md-block d-none bg-primary p-0 mt-n1 vh-100 overflow-hidden">
+             <img src="https://images5.alphacoders.com/368/368825.jpg" class="img-fluid gradient-main animated-scaleX" alt="images">
+          </div>
+       </div>
+    </section>
+ </x-guest-layout>
+ @extends('modals.register')
+ 

@@ -1,0 +1,8 @@
+[27-Jun-2023 22:34:37 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function PHP_INFO() in /home/southernleyteorg/public_html/emercado/public/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/southernleyteorg/public_html/emercado/public/index.php on line 2
+[27-Jun-2023 22:34:38 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function PHP_INFO() in /home/southernleyteorg/public_html/emercado/public/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/southernleyteorg/public_html/emercado/public/index.php on line 2

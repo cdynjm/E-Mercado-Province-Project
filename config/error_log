@@ -1,0 +1,4 @@
+[06-Jul-2023 10:47:27 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/southernleyteorg/public_html/emercado/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/southernleyteorg/public_html/emercado/config/database.php on line 18
